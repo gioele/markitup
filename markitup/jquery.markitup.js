@@ -92,8 +92,8 @@
 
 		// compute markItUp! path
 		if (!options.root) {
-			$('script').each(function(a, tag) {
-				miuScript = $(tag).get(0).src.match(/(.*)jquery\.markitup(\.pack)?\.js$/);
+			$('script').each(function(i, tag) {
+				var miuScript = $(tag).get(0).src.match(/(.*)jquery\.markitup(\.pack)?\.js$/);
 				if (miuScript !== null) {
 					options.root = miuScript[1];
 				}
@@ -271,7 +271,7 @@
 							if (abort === true) {
 								return false;
 							}
-							value = prompt(b[0], (b[1]) ? b[1] : '');
+							var value = prompt(b[0], (b[1]) ? b[1] : '');
 							if (value === null) {
 								abort = true;
 							}
@@ -300,6 +300,8 @@
 				var openBlockWith 		= prepare(clicked.openBlockWith);
 				var closeBlockWith 		= prepare(clicked.closeBlockWith);
 				var multiline 			= clicked.multiline;
+
+				var block;
 				
 				if (replaceWith !== "") {
 					block = openWith + replaceWith + closeWith;
