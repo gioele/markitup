@@ -24,7 +24,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 // ----------------------------------------------------------------------------
-(function($) {
+(function ($) {
 	function browserForOldJQuery() {
 		// Quick patch to keep compatibility with jQuery 1.9
 		var uaMatch = function(ua) {
