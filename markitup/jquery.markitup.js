@@ -229,7 +229,7 @@
 							if (button.call) {
 								eval(button.call)();
 							}
-							setTimeout(function() { markup(button) },1);
+							setTimeout(function() { markup(button); }, 1);
 							return false;
 						}).bind('mouseenter.markItUp', function() {
 								$('> ul', this).show();
